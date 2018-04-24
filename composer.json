@@ -46,14 +46,14 @@
             "@php artisan key:generate",
             "php artisan ide-helper:generate",
             "php artisan ide-helper:meta",
-            "php artisan optimize"
+          
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover",
             "php artisan ide-helper:generate",
             "php artisan ide-helper:meta",
-            "php artisan optimize"
+           
         ]
     },
     "config": {
