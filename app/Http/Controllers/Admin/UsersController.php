@@ -1,10 +1,10 @@
-<?php
+<?php /** @noinspection ALL */
 
 namespace SON\Http\Controllers\Admin;
 
 
 
-
+use Kris\LaravelFormBuilder\FormBuilderTrait;
 use SON\Forms\UserForm;
 use SON\Models\User;
 use Illuminate\Http\Request;
@@ -13,6 +13,7 @@ use SON\Http\Controllers\Controller;
 
 class UsersController extends Controller
 {
+    use FormBuilderTrait;
     /**
      * Display a listing of the resource.
      *
@@ -47,7 +48,23 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /** @var  Form $form */
+
+        $form = \FormBuilder::create(UserForm::class);
+
+        if(!$form->isValid()){
+            return redirect()
+                ->back()
+                ->withErrors($form->getErrors())
+                ->withInput();
+        }
+
+
+
+        $data = $form->getFieldValues();
+        $password = str_random(6);
+        $data['password'] = $password;
+        User::create($data);
     }
 
     /**
