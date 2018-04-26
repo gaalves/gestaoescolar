@@ -9,9 +9,9 @@
 
                     <div class="card-body">
                         {!!
-                            form($form->add('edit', 'submit',[
+                            form($form->add('edit','submit',[
                                 'attr' => ['class' => 'btn btn-primary btn-block'],
-                                'label' => 'Editar'
+                                'label' => Icon::create('save').' Editar'
                             ]))
                         !!}
                     </div>

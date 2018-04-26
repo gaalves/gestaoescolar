@@ -18,5 +18,10 @@
         "laravel-mix": "^2.0",
         "lodash": "^4.17.4",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "glyphicons": "^0.2.0",
+        "glyphicons-halflings": "^1.9.1",
+        "gulp": "^3.9.1"
     }
 }

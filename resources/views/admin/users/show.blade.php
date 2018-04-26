@@ -12,9 +12,10 @@
                     @endphp
                     <br>
                         <div class="col-md-4">
-                            {!! Button::primary('Editar')->asLinkTo($linkEdit) !!}
+                            {!! Button::primary(Icon::edit())->asLinkTo($linkEdit) !!}
+
                             {!!
-                                Button::danger('Deletar')->asLinkTo($linkDelete)
+                                Button::danger(Icon::trash())->asLinkTo($linkDelete)
                                     ->addAttributes([
                                         'onclick' => "event.preventDefault();document.getElementById(\"form-delete\").submit();"
                                     ])

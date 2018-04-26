@@ -19,8 +19,8 @@
                                ->callback('Ações', function($field, $model){
                                     $linkEdit = route('admin.users.edit', ['user' => $model->id]);
                                     $linkShow = route('admin.users.show', ['user' => $model->id]);
-                                    return Button::Link('Editar')->asLinkTo($linkEdit).'|'.
-                                        Button::Link('Ver')->asLinkTo($linkShow);
+                                    return Button::Link(Icon::create('edit').'Editar')->asLinkTo($linkEdit).'|'.
+                                        Button::Link(Icon::create('folder-open').'Ver')->asLinkTo($linkShow);
                                })
                            !!}
                         </div>
