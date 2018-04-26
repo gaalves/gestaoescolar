@@ -54,6 +54,7 @@
                             <th scope="row">Email</th>
                             <td>{{ $user->email }}</td>
                         </tr>
+
                         </tbody>
                     </table>
 

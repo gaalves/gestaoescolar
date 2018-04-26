@@ -29,6 +29,9 @@ Route::prefix('admin')->group(function(){
         Route::name('dashboard')->get('/dasboard', function(){
            return "Estou no dashboard";
         });
+        Route::group(['prefix' => 'users', 'as' => 'users.'], function(){
+            Route::name('show_details')->get('show_details', 'UsersController@showDetails');
+        });
         Route::resource('users', 'UsersController');
     });
 });

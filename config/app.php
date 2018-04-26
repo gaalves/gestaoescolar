@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'webSystem'),
+    'name' => env('APP_NAME', 'GestaoEDUC'),
 
     /*
     |--------------------------------------------------------------------------
@@ -217,7 +217,9 @@ return [
         'Icon' => Bootstrapper\Facades\Icon::class,
         'Navbar' => Bootstrapper\Facades\Navbar::class,
         'Navigation' => Bootstrapper\Facades\Navigation::class,
-        'Alert' => Bootstrapper\Facades\Alert::class
+        'Alert' => Bootstrapper\Facades\Alert::class,
+        'Badge' => \Bootstrapper\Facades\Badge::class
+
 
     ],
 

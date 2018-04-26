@@ -118,7 +118,7 @@
             <!-- Main content -->
             <section class="content">
                 @if(Session::has('message'))
-                    <div class="container">
+                    <div class="container hidden-print">
                         <div class="col-md-4">
                             {!! Alert::success(Session::get('message'))->close() !!}
                         </div>
