@@ -151,6 +151,7 @@ return [
          * Package Service Providers...
          */
         Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
+        Bootstrapper\BootstrapperL5ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -209,7 +210,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class
+        'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
+        'Label' => Bootstrapper\Facades\Label::class,
+        'Button' => Bootstrapper\Facades\Button::class,
+        'Table' => Bootstrapper\Facades\Table::class,
+        'Icon' => Bootstrapper\Facades\Icon::class,
 
     ],
 

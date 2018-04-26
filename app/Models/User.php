@@ -2,10 +2,11 @@
 
 namespace SON\Models;
 
+use Bootstrapper\Interfaces\TableInterface;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements TableInterface
 {
     use Notifiable;
 
@@ -26,4 +27,24 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getTableHeaders()
+    {
+        // TODO: Implement getTableHeaders() method.
+        return ['ID', 'Nome', 'Email'];
+    }
+
+    public function getValueForHeader($header)
+    {
+        // TODO: Implement getValueForHeader() method.
+        switch ($header){
+            case 'ID':
+                return $this->id;
+            case 'Nome':
+                return $this->name;
+            case 'Email':
+                return $this->email;
+
+        }
+    }
 }
