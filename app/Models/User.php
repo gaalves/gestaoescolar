@@ -5,6 +5,8 @@ namespace SON\Models;
 use Bootstrapper\Interfaces\TableInterface;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Notification;
+use SON\Notifications\UserCreated;
 
 class User extends Authenticatable implements TableInterface
 {
@@ -31,12 +33,19 @@ class User extends Authenticatable implements TableInterface
         'password', 'remember_token',
     ];
 
+    /**
+     * @param $data
+     * @return $this|\Illuminate\Database\Eloquent\Model|TYPE_NAME
+     */
     public static function createFully($data){
         $password = str_random(6);
         $data['password'] = $password;
         $user = parent::create($data+['enrolment' => str_random(6)]);
         self::assignEnrolment($user, self::ROLE_ADMIN);
         $user->save();
+        if(isset($data['send_mail'])){
+            $user->notify(new UserCreated());
+        }
         return $user;
     }
 
