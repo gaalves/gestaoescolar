@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5420d4e7a32ca305a4a80458b0f9d7f5",
+    "content-hash": "570107e3bcfe9d0e8082c9afe15fbc7a",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -455,32 +455,40 @@
         },
         {
             "name": "kris/laravel-form-builder",
-            "version": "1.6.50",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kristijanhusak/laravel-form-builder.git",
-                "reference": "627c5e40b8c5e29fb8e68d142bcd3379cd850611"
+                "reference": "8d1c67102e20c485717823f1be02b4b2235d072f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kristijanhusak/laravel-form-builder/zipball/627c5e40b8c5e29fb8e68d142bcd3379cd850611",
-                "reference": "627c5e40b8c5e29fb8e68d142bcd3379cd850611",
+                "url": "https://api.github.com/repos/kristijanhusak/laravel-form-builder/zipball/8d1c67102e20c485717823f1be02b4b2235d072f",
+                "reference": "8d1c67102e20c485717823f1be02b4b2235d072f",
                 "shasum": ""
             },
             "require": {
                 "illuminate/database": "5.*@dev",
                 "illuminate/validation": "5.*@dev",
                 "laravelcollective/html": "5.*",
-                "php": ">=5.5.0"
+                "php": ">=5.6.0"
             },
             "require-dev": {
-                "orchestra/testbench": "~3.0",
-                "phpunit/phpunit": "~4.0"
+                "orchestra/testbench": "~3.4",
+                "phpunit/phpunit": "~5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.12.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Kris\\LaravelFormBuilder\\FormBuilderServiceProvider"
+                    ],
+                    "aliases": {
+                        "FormBuilder": "Kris\\LaravelFormBuilder\\Facades\\FormBuilder"
+                    }
                 }
             },
             "autoload": {
@@ -505,7 +513,7 @@
                 }
             ],
             "description": "Laravel form builder - symfony like",
-            "time": "2016-01-22T12:48:35+00:00"
+            "time": "2017-12-17T16:41:18+00:00"
         },
         {
             "name": "laravel/framework",
