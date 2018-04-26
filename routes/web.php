@@ -26,6 +26,13 @@ Route::prefix('admin')->group(function(){
         'as' => 'admin.',
         'middleware' => 'auth'
     ], function(){
+        Route::name('dashboard')->get('/dasboard', function(){
+           return "Estou no dashboard";
+        });
         Route::resource('users', 'UsersController');
     });
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -22,7 +22,7 @@ class UsersController extends Controller
     public function index()
     {
         //
-        $users = User::paginate();
+        $users = User::paginate(5);
         return view('admin.users.index', compact('users'));
     }
 
@@ -67,6 +67,7 @@ class UsersController extends Controller
         $password = str_random(6);
         $data['password'] = $password;
         User::create($data);
+        $request->session()->flash('message', 'Usuário criado com sucesso');
         return redirect()->route('admin.users.index');
     }
 
@@ -124,10 +125,9 @@ class UsersController extends Controller
                 ->withInput();
         }
 
-
-
         $data = $form->getFieldValues();
         $user->update($data);
+        session()->flash('message', 'Usuário Editado com Sucesso');
         return redirect()->route('admin.users.index');
     }
 
@@ -141,6 +141,7 @@ class UsersController extends Controller
     {
         //
         $user->delete();
+        session()->flash('message', 'Usuário deletado com sucesso');
         return redirect()->route('admin.users.index');
     }
 }
