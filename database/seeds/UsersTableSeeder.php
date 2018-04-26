@@ -13,7 +13,8 @@ class UsersTableSeeder extends Seeder
     {
         //
         factory(\SON\Models\User::class)->create([
-           'email' => 'admin@user.com'
+           'email' => 'admin@user.com',
+            'enrolment' => 100000
         ]);
     }
 }
