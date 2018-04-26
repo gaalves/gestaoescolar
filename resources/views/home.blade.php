@@ -11,7 +11,7 @@
         <div class="box box-default">
             <!-- /.box-header -->
             <div class="box-body">
-                Dashboard
+                {{ Auth::user() }}
             </div>
             <!-- /.box-body -->
         </div>

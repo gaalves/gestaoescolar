@@ -24,18 +24,19 @@ Route::prefix('admin')->group(function(){
     Route::group([
         'namespace' => 'admin\\',
         'as' => 'admin.',
-        'middleware' => 'auth'
+        'middleware' => ['auth', 'can:admin']
     ], function(){
-        Route::name('dashboard')->get('/dasboard', function(){
-           return "Estou no dashboard";
-        });
-        Route::group(['prefix' => 'users', 'as' => 'users.'], function(){
-            Route::name('show_details')->get('show_details', 'UsersController@showDetails');
-        });
-        Route::resource('users', 'UsersController');
+            Route::name('dashboard')->get('/dasboard', function(){
+               return "Estou no dashboard";
+            });
+            Route::group(['prefix' => 'users', 'as' => 'users.'], function(){
+                Route::name('show_details')->get('show_details', 'UsersController@showDetails');
+            });
+            Route::resource('users', 'UsersController');
     });
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
