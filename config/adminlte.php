@@ -112,6 +112,7 @@ return [
         [
             'text'    => 'Administrator',
             'icon'    => 'basketball-hoop',
+            'can' => 'admin',
             'submenu' => [
                 [
                     'text' => 'Usuário',
@@ -119,6 +120,12 @@ return [
                     'icon' => 'users'
                 ],
             ],
+
+        ],
+        [
+            'text'    => 'User',
+            'icon'    => 'users',
+            'route'   => 'admin.users.settings.edit'
         ],
 
     ],
