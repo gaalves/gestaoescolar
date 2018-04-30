@@ -33,6 +33,11 @@ use SON\Notifications\UserCreated;
             'password', 'remember_token',
         ];
 
+        public function profile()
+        {
+            return $this->hasOne(UserProfile::class)->withDefault();
+        }
+
         public function userable()
         {
             return $this->morphTo();

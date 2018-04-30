@@ -1,10 +1,13 @@
-<?php
+<?php /** @noinspection ALL */
 
 namespace SON\Http\Controllers\Admin;
 
+
+
 use Illuminate\Http\Request;
-use SON\Http\Controllers\Controller;
 use SON\Forms\UserSettingsForm;
+use SON\Http\Controllers\Controller;
+
 
 class UserSettingsController extends Controller
 {

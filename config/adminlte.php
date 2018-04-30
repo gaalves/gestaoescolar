@@ -115,7 +115,7 @@ return [
             'can' => 'admin',
             'submenu' => [
                 [
-                    'text' => 'Usuário',
+                    'text' => 'Listar Usuáris',
                     'route'  => 'admin.users.index',
                     'icon' => 'users'
                 ],
@@ -123,7 +123,7 @@ return [
 
         ],
         [
-            'text'    => 'User',
+            'text'    => 'Meu Usuário',
             'icon'    => 'users',
             'route'   => 'admin.users.settings.edit'
         ],
