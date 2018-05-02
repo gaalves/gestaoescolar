@@ -115,18 +115,24 @@ return [
             'can' => 'admin',
             'submenu' => [
                 [
-                    'text' => 'Listar Usuáris',
+                    'text' => 'Listar Usuários',
                     'route'  => 'admin.users.index',
+                    'icon' => 'users'
+                ],
+                [
+                    'text' => 'Listar Turmas',
+                    'route'  => 'admin.class_informations.index',
+                    'icon' => 'users'
+                ],
+                [
+                    'text' => 'Listar Disciplinas',
+                    'route'  => 'admin.subjects.index',
                     'icon' => 'users'
                 ],
             ],
 
         ],
-        [
-            'text'    => 'Meu Usuário',
-            'icon'    => 'users',
-            'route'   => 'admin.users.settings.edit'
-        ],
+
 
     ],
 

@@ -76,6 +76,50 @@
                                 </form>
                             @endif
                         </li>
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                                <span class="hidden-xs">{{ Auth::user()->name }}</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+
+
+                                    <p>
+                                        {{ Auth::user()->name }}
+                                        <small>Member since Nov. 2012</small>
+                                    </p>
+                                </li>
+
+
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="{{ route('admin.users.settings.edit') }}" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+
+                                        @if(config('adminlte.logout_method') == 'GET' || !config('adminlte.logout_method') && version_compare(\Illuminate\Foundation\Application::VERSION, '5.3.0', '<'))
+                                            <a class="btn btn-default btn-flat" href="{{ url(config('adminlte.logout_url', 'auth/logout')) }}">
+                                                Sair
+                                            </a>
+                                        @else
+                                            <a href="#" class="btn btn-default btn-flat"
+                                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                Sair
+                                            </a>
+                                            <form id="logout-form" action="{{ url(config('adminlte.logout_url', 'auth/logout')) }}" method="POST" style="display: none;">
+                                                @if(config('adminlte.logout_method'))
+                                                    {{ method_field(config('adminlte.logout_method')) }}
+                                                @endif
+                                                {{ csrf_field() }}
+                                            </form>
+                                        @endif
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
 
                     </ul>
                 </div>
