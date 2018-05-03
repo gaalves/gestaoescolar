@@ -12,8 +12,8 @@
             <!-- /.box-header -->
             <div class="box-body">
                 @php
-                    $linkEdit = route('admin.class_informations.edit', ['subject' => $subject->id]);
-                    $linkDelete = route('admin.class_informations.destroy', ['subject' => $subject->id]);
+                    $linkEdit = route('admin.class_informations.edit', ['class_information' => $class_information->id]);
+                    $linkDelete = route('admin.class_informations.destroy', ['class_information' => $class_information->id]);
                 @endphp
                 <div class="row">
                     <div class="col-md-4">

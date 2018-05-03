@@ -25,7 +25,7 @@ class UsersTableSeeder extends Seeder
             $user->save();
         });
 
-        factory(User::class,10)->create()->each(function(User $user){
+        factory(User::class,100)->create()->each(function(User $user){
             if(!$user->userable) {
                 $profile = factory(UserProfile::class)->make();
                 $user->profile()->create($profile->toArray());
@@ -35,7 +35,9 @@ class UsersTableSeeder extends Seeder
             }
         });
 
-        factory(User::class,10)->create()->each(function(User $user){
+        factory(User::class,100)->create()->each(
+
+            function(User $user){
             if(!$user->userable) {
                 $profile = factory(UserProfile::class)->make();
                 $user->profile()->create($profile->toArray());
