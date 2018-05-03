@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/vendor/font-awesome/css/font-awesome.min.css') }}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/vendor/Ionicons/css/ionicons.min.css') }}">
+    <!-- Styles -->
+    <link href="{{ asset('css/admin.css') }}">
 
     @if(config('adminlte.plugins.select2'))
         <!-- Select2 -->
@@ -69,6 +71,6 @@
 @endif
 
 @yield('adminlte_js')
-
+<script src="{{ asset('js/admin.js') }}"></script>
 </body>
 </html>

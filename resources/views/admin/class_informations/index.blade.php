@@ -22,8 +22,10 @@
                        ->callback('Ações', function($field, $model){
                             $linkEdit = route('admin.class_informations.edit', ['subject' => $model->id]);
                             $linkShow = route('admin.class_informations.show', ['subject' => $model->id]);
+                            $linkStudents = route('admin.class_informations.students.index', ['class_information' => $model->id]);
                             return Button::Link(Icon::create('edit').'Editar')->asLinkTo($linkEdit).'|'.
-                                Button::Link(Icon::create('folder-open').'Ver')->asLinkTo($linkShow);
+                                Button::Link(Icon::create('folder-open').'Ver')->asLinkTo($linkShow). '|'.
+                                Button::Link(Icon::create('home').'Alunos')->asLinkTo($linkStudents);
                        })
                    !!}
 

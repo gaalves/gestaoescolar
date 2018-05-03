@@ -23,6 +23,6 @@ O arquivo README.md foi baseado no do repositório [Leomhl/laravel-5.4-pt-br-loc
 
 2. Configurar o Framework para utilizar 'pt-BR' como linguagem padrão
   ```
-  // Linha 81 do arquivo config/app.php
+  // Linha 81 do arquivo config/admin.php
   'locale' => 'pt-BR',
   ```
