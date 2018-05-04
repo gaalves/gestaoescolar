@@ -17,11 +17,16 @@
         "jquery": "^3.2",
         "laravel-mix": "^2.0",
         "lodash": "^4.17.4",
-        "vue": "^2.5.7"
+        "vue": "^2.5.7",
+        "vue-deepset": "^0.6.3",
+        "vue-resource": "^1.5.0",
+        "vue-router": "^3.0.1",
+        "vuex": "^3.0.1"
     },
     "dependencies": {
         "glyphicons": "^0.2.0",
         "glyphicons-halflings": "^1.9.1",
-        "gulp": "^3.9.1"
+        "gulp": "^3.9.1",
+        "npm": "^6.0.0"
     }
 }
